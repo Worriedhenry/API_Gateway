@@ -5,18 +5,14 @@ const app = express();
 require('dotenv').config();
 
 
-app.use(cors({
-    origin: '*' ,
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization' 
-
-}));
+app.use(cors());
 
 
 const routes = {
     "/services": process.env.SERVICES,
     "/auth": process.env.AUTH,
     "/search": process.env.SEARCH,
+    "/user": process.env.USER
 };
 
 
